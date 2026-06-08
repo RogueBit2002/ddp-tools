@@ -13,7 +13,7 @@ pub fn build(b: *std.Build) void {
     const c_module = translate_c.createModule();
     
     const root_module = b.createModule(.{
-        .root_source_file = b.path("src/lib.zig"),
+        .root_source_file = b.path("src/root.zig"),
         .target = target,
         .optimize = optimize,
         .imports = &.{
